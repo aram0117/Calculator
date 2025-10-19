@@ -1,17 +1,26 @@
 package LV2;
 
+import java.util.ArrayList;
+
 public class Calculator {
 
     /*연산 결과를 저장하는 컬렉션 타입 필드를 외부에서 직접 접근 하지 못하도록 수정*/
+    private ArrayList<Integer> resultcolection = new ArrayList<>();
+    public void addResults(int result) {
+        resultcolection.add(result);
+    }
+    // 게터로 캡슐화 된 컬렉션 필드를 가져오기
+    // 외부에서 조회할수 있도록 public 접근제어자 사용
+    public ArrayList<Integer> getResultcolection() {
+       return resultcolection;
+    }
 
 
     // 연산 결과를 반환받는 변수
-    Integer result;
+    int result;
 
-    public Integer calculate(Integer a, Integer b, char sign) {
-        // 1. 연산 기능
-        // 지금 부호는 자료형이 char이므로 연산 할때는 정수형으로 바꿔서 정상작동
-        // return으로 연산 결과 반환
+    // 게산기능
+    public int calculate(int a, int b, char sign) {
         // 더하기가 입력되면 실행
         if (sign == '+') {
             result = a + b;
@@ -33,11 +42,11 @@ public class Calculator {
                 System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.\n<이전 계산 결과>\n-------------------------");
             }
         }
+        // return으로 연산 결과 반환
         return result;
     }
 
     public void removeResult() {
-        /* 구현 */
 
     }
 }

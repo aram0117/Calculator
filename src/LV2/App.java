@@ -12,7 +12,7 @@ public class App {
 
         /* 반복문 시작 */
         while (true) {
-            // 정수와 부호를 입력받는 인자를 매개변수로 넘겨 연산결과 실행
+            // 정수와 부호를 입력받는 인자를 매개변수로 넘김
             System.out.println("[계산기] (+,-,*,/)");
             System.out.println("*****************");
             System.out.print("첫 번째 숫자를 입력하세요 : ");
@@ -25,11 +25,18 @@ public class App {
             int b = sc.nextInt();
             System.out.println("-------------------------");
 
-            // 계산 결과
+            // 인자를 받은 매개변수의 계산 결과
+            System.out.println("<결과>");
             System.out.println(calculator.calculate(a, b, sign));
+            // 결과 값을 콜렉션에 저장
+            calculator.addResults(calculator.result);
             System.out.println("-------------------------");
 
+            // 값이 저장된 컬렉션
+            System.out.println(calculator.getResultcolection());
+
             //게산이 끝난 후 종료
+            System.out.println("-------------------------");
             System.out.println("exit를 입력하면 종료됩니다");
             System.out.println("-------------------------");
             String input = sc.next();
