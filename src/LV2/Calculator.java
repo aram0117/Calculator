@@ -4,24 +4,27 @@ import java.util.ArrayList;
 
 public class Calculator {
 
-    /*연산 결과를 저장하는 컬렉션 타입 필드를 외부에서 직접 접근 하지 못하도록 수정*/
+    // 결과 저장
     private ArrayList<Integer> resultcolection = new ArrayList<>();
-    public void addResults(int result) {
+    public void addResults() {
         resultcolection.add(result);
     }
     // 게터로 캡슐화 된 컬렉션 필드를 가져오기
-    // 외부에서 조회할수 있도록 public 접근제어자 사용
+    // 외부에서 조회할수 있도록 plic 접근제어자 사용
     public ArrayList<Integer> getResultcolection() {
        return resultcolection;
     }
-
+    // 세터로 컬렉션 필드 수정
+    public void setResult(int setresult){
+        resultcolection.set(0, setresult);
+    }
 
     // 연산 결과를 반환받는 변수
     int result;
 
     // 게산기능
     public int calculate(int a, int b, char sign) {
-        // 더하기가 입력되면 실행
+        // 더하기가 입력되면 실행argument lists d
         if (sign == '+') {
             result = a + b;
         }
@@ -46,7 +49,9 @@ public class Calculator {
         return result;
     }
 
+    // 결과 삭제
     public void removeResult() {
-
+        // 가장 먼저 저장된 결과 삭제
+        resultcolection.remove(0);
     }
 }
