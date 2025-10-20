@@ -5,7 +5,7 @@
 ## 프로젝트 진행
 - 계산 기능을 구헌할 Calculator.class 파일생성
 - 사용자가 입력하고 실행하는 기능을 구현할 App.class 파일생성과 main문 작성
-- 
+
 ## 구현 기능
 - 연산 결과를 반환하는 calculate
 - 연산 결과를 컬렉션에 추가하여 저장하는 addResult
