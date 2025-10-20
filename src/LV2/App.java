@@ -44,7 +44,7 @@ public class App {
             //
             // 결과 삭제
             calculator.removeResult();
-            System.out.println("삭제");
+            System.out.println("<삭제>");
             System.out.println(calculator.getResultcolection());
 
             //게산이 끝난 후 종료

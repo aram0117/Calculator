@@ -10,7 +10,7 @@ public class Calculator {
         resultcolection.add(result);
     }
     // 게터로 캡슐화 된 컬렉션 필드를 가져오기
-    // 외부에서 조회할수 있도록 plic 접근제어자 사용
+    // 외부에서 조회할수 있도록 public 접근제어자 사용
     public ArrayList<Integer> getResultcolection() {
        return resultcolection;
     }
