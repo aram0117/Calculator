@@ -29,23 +29,23 @@ public class App {
             System.out.println("<결과>");
             System.out.println(calculator.calculate(a, b, sign));
             // 결과 값을 콜렉션에 저장
-            calculator.addResults();
+            calculator.addResult();
             System.out.println("-------------------------");
 
             // 게터로 컬렉션 조회
             System.out.println("<계산결과 컬렉션>");
-            System.out.println(calculator.getResultcolection());
+            System.out.println(calculator.getResult());
 
             // 세터로 수정
             calculator.setResult(5);
             System.out.println("<수정>");
-            System.out.println(calculator.getResultcolection());
+            System.out.println(calculator.getResult());
 
             //
             // 결과 삭제
             calculator.removeResult();
             System.out.println("<삭제>");
-            System.out.println(calculator.getResultcolection());
+            System.out.println(calculator.getResult());
 
             //게산이 끝난 후 종료
             System.out.println("-------------------------");
